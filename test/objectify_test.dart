@@ -1,5 +1,4 @@
 import 'package:objectify/objectify.dart';
-import 'package:test/test.dart';
 
 @Objectify()
 class SuperCls {
