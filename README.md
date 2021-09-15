@@ -16,6 +16,7 @@ class NestedModel {
 class SomeModel {
   bool? foo;
   String? bar;
+  NestedModel nested;
 }
 
 void main() {
