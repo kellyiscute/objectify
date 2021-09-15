@@ -1,19 +1,33 @@
-A library for Dart developers.
+# Objectify
+Turn any Map into your class object
 
-## Usage
-
-A simple usage example:
-
+## QuickStart
 ```dart
-import 'package:objectify/objectify.dart';
 
-main() {
-  var awesome = new Awesome();
+import "objectify/objectify.dart" as obj;
+
+@Objectify()
+class NestedModel {
+  String? yay;
+  int? nested;
 }
+
+@Objectify()
+class SomeModel {
+  bool? foo;
+  String? bar;
+}
+
+void main() {
+  final data = {}; // your data
+  final model = obj.deserialize<SomeModel>(data);
+  // OR
+  final model2 = obj.deserialize(data, SomeModel);
+  // They are actually the same!
+}
+
 ```
 
-## Features and bugs
+## NOTICE
+this package uses dart:mirrors, which means you will not be able to use AOT!
 
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
