@@ -1,0 +1,10 @@
+name: objectify
+description: Turn any Map into your data object
+version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dev_dependencies:
+  pedantic: ^1.10.0
